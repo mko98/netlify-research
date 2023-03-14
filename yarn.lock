@@ -836,6 +836,16 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.36.0.tgz#9837f768c03a1e4a30bd304a64fb8844f0e72efe"
   integrity sha512-lxJ9R5ygVm8ZWgYdUweoq5ownDlJ4upvoWmO4eLxBYHdMo+vZ/Rx0EN6MbKWDJOSUGrqJy2Gt+Dyv/VKml0fjg==
 
+"@headlessui/vue@^1.0.0":
+  version "1.7.12"
+  resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.7.12.tgz#963b2eb2f548278c49f2d1e67f0a4a84f54078da"
+  integrity sha512-IV0k1I2I8Bj37HljFF231Y9cpldfiucf+inMCxA/VPoQT6UTxo0N/rb78CrogBxXNfsPxKmz3y/nlv+eRz6zvg==
+
+"@heroicons/vue@^2.0.16":
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-2.0.16.tgz#eb21f6ab32605570fa21a0172da4a6ab02670834"
+  integrity sha512-saVAExLlGu6epqmS543qeWd/UOJUxpTJyK9aXeFGqS3VIW8X7yyJQmUGT40A38gBEAxMOdTdH9jFSh8sjPFM7A==
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"
@@ -967,7 +977,7 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.0.tgz#c7bd7e9a516514e612d5d2e511ffc399e0eac322"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/kit@3.2.3", "@nuxt/kit@^3.2.0", "@nuxt/kit@^3.2.3":
+"@nuxt/kit@3.2.3", "@nuxt/kit@^3.0.0", "@nuxt/kit@^3.2.0", "@nuxt/kit@^3.2.3":
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.2.3.tgz#97d8b4a4bedda4452ea18629c73c6301a964d492"
   integrity sha512-wcsVlQLwGkh1cRhAFWHc3uYHdIxFTRNdRUzNyfqoX9DL0Fuga3K75q/PBY0xg1viA9R6F5BMPhc7KDLSWbXtWg==
@@ -4920,6 +4930,15 @@ nuxi@3.2.3:
   integrity sha512-ABbIAzsHol8gNXQn2Q3R94iCb1FLmDpep9iAAijCbp0sy7udsjsj71tsKf0xp3C8UNHONnxPI32PitZXNVODxw==
   optionalDependencies:
     fsevents "~2.3.2"
+
+nuxt-headlessui@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/nuxt-headlessui/-/nuxt-headlessui-1.1.1.tgz#ae0207fc4a2d8463596368bc10562937ca4fe451"
+  integrity sha512-sf8qZQvGDaI+uNnKuynFGY+VXScDNEj3W0LMjv2XH4jO4ksQzbliCB9Hl5cdd/VIFPVmnZm+dnneURSI4/1fXw==
+  dependencies:
+    "@headlessui/vue" "^1.0.0"
+    "@nuxt/kit" "^3.0.0"
+    pathe "^1.0.0"
 
 nuxt@^3.2.3:
   version "3.2.3"
