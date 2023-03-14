@@ -148,3 +148,5 @@ fabric.properties
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/yarn,webstorm+all,macos
+
+.idea
