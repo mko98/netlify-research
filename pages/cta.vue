@@ -134,13 +134,22 @@ const formData: form = {
 };
 
 function onCtaClick(buttonName: string) {
-  // TODO: implement event for cta button click analytics
-  console.log("CTA clicked:", buttonName);
+  $gtm.trackEvent({
+    event: null, // Event type [default = 'interaction'] (Optional)
+    category: "Button",
+    action: "click",
+    label: `${buttonName} clicked`,
+  });
 }
 
 function handleFormSubmit() {
   // TODO: implement event for form submit
-  console.log("Form input:", formData);
+  $gtm.trackEvent({
+    event: null, // Event type [default = 'interaction'] (Optional)
+    category: "Form",
+    action: "Submit",
+    label: `User form`,
+  });
 }
 </script>
 

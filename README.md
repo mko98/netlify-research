@@ -1,5 +1,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ceec82e1-cfab-4cb3-8414-cc1dddcded27/deploy-status)](https://app.netlify.com/sites/thunderous-pastelito-103c45/deploys)
 
+# Google tag manager for analytics
+NPM package used is [@gtm-support/vue-gtm](https://www.npmjs.com/package/@gtm-support/vue-gtm)
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
