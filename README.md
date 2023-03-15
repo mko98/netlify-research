@@ -3,6 +3,7 @@
 # Google tag manager for analytics
 NPM package used is [@gtm-support/vue-gtm](https://www.npmjs.com/package/@gtm-support/vue-gtm)
 
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
