@@ -1,7 +1,7 @@
 import { createGtm } from "@gtm-support/vue-gtm";
-const runtimeConfig = useRuntimeConfig().public;
 export default defineNuxtPlugin((nuxtApp) => {
-  if (useRuntimeConfig().public.appEnv !== "production") return;
+  const runtimeConfig = useRuntimeConfig().public;
+  if (useRuntimeConfig().public.appEnv !== "prod") return;
   nuxtApp.vueApp.use(
     createGtm({
       id: runtimeConfig.GOOGLE_TAG_MANAGER_KEY, // TODO: Add google analytics id to .env
