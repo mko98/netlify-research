@@ -119,6 +119,8 @@
 </template>
 
 <script lang="ts" setup>
+const $gtm = useGTM();
+
 interface form {
   firstName: string;
   lastName: string;
@@ -132,23 +134,21 @@ const formData: form = {
   email: "",
   username: "",
 };
-
+function handleFormSubmit() {
+  $gtm.trackEvent({
+    event: null, // Event type [default = 'interaction'] (Optional)
+    category: "Form",
+    action: "Submit",
+    label: `User form`,
+    value: formData,
+  });
+}
 function onCtaClick(buttonName: string) {
   $gtm.trackEvent({
     event: null, // Event type [default = 'interaction'] (Optional)
     category: "Button",
     action: "click",
     label: `${buttonName} clicked`,
-  });
-}
-
-function handleFormSubmit() {
-  // TODO: implement event for form submit
-  $gtm.trackEvent({
-    event: null, // Event type [default = 'interaction'] (Optional)
-    category: "Form",
-    action: "Submit",
-    label: `User form`,
   });
 }
 </script>
