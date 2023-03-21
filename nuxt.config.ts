@@ -2,6 +2,11 @@
 export default defineNuxtConfig({
   ssr: false,
   css: ["@/assets/styles/styles.css"],
+  plugins: [
+    {
+      src: "@/plugins/analytics.js",
+    },
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -12,4 +17,4 @@ export default defineNuxtConfig({
   headlessui: {
     prefix: "Headless",
   },
-});
+})
