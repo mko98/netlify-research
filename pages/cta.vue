@@ -119,6 +119,8 @@
 </template>
 
 <script lang="ts" setup>
+import * as amplitude from "@amplitude/analytics-browser";
+
 interface form {
   firstName: string;
   lastName: string;
@@ -136,11 +138,13 @@ const formData: form = {
 function onCtaClick(buttonName: string) {
   // TODO: implement event for cta button click analytics
   console.log("CTA clicked:", buttonName);
+  amplitude.track(`Button Clicked: ${buttonName}`);
 }
 
 function handleFormSubmit() {
   // TODO: implement event for form submit
   console.log("Form input:", formData);
+  amplitude.track(`Form input: ${formData}`);
 }
 </script>
 
