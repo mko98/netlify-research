@@ -1,4 +1,4 @@
-import VueGtag from "vue-gtag-next";
+import VueGtag, { trackRouter } from "vue-gtag-next";
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig();
@@ -9,5 +9,6 @@ export default defineNuxtPlugin((nuxtApp) => {
         id: config.public.GOOGLE_ANALYTICS_ID,
       },
     });
+    trackRouter(useRouter());
   }
 });

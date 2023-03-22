@@ -4,7 +4,7 @@
       <button
         type="button"
         class="m-2 max-w-fit rounded-md bg-indigo-600 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        @click="onCtaClick('CTA1')"
+        @click="onCtaClick('CTA 1')"
       >
         CTA 1
       </button>
@@ -12,7 +12,7 @@
       <button
         type="button"
         class="m-2 max-w-fit rounded-md bg-indigo-600 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        @click="onCtaClick('CTA2')"
+        @click="onCtaClick('CTA 2')"
       >
         CTA 2
       </button>
@@ -20,7 +20,7 @@
       <button
         type="button"
         class="m-2 max-w-fit rounded-md bg-indigo-600 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        @click="onCtaClick('CTA3')"
+        @click="onCtaClick('CTA 3')"
       >
         CTA 3
       </button>
@@ -119,7 +119,27 @@
 </template>
 
 <script lang="ts" setup>
-const $gtm = useGTM();
+import { useGtag } from "vue-gtag-next";
+
+const { event } = useGtag();
+
+const handleFormSubmit = () => {
+  console.log("Form submitted");
+  event("Form", {
+    event_category: "User",
+    event_action: "Submit",
+    event_label: `Personal information`,
+  });
+};
+
+const onCtaClick = (buttonName: string) => {
+  console.log(`${buttonName} clicked`);
+  event("Button", {
+    event_category: "CTA",
+    event_action: "Click",
+    event_label: buttonName,
+  });
+};
 
 interface form {
   firstName: string;
@@ -134,23 +154,6 @@ const formData: form = {
   email: "",
   username: "",
 };
-function handleFormSubmit() {
-  $gtm.trackEvent({
-    event: null, // Event type [default = 'interaction'] (Optional)
-    category: "Form",
-    action: "Submit",
-    label: `User form`,
-    value: formData,
-  });
-}
-function onCtaClick(buttonName: string) {
-  $gtm.trackEvent({
-    event: null, // Event type [default = 'interaction'] (Optional)
-    category: "Button",
-    action: "click",
-    label: `${buttonName} clicked`,
-  });
-}
 </script>
 
 <style scoped></style>
